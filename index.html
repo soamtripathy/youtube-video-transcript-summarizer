@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Video Transcript Summarizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="mainmenu">
+      <ul>
+        Home
+      </ul>
+      <ul>
+        About Us
+      </ul>
+      <ul>
+        Contact
+      </ul>
+    </section>
+    <section class="url-link">
+      <label for="url">Enter YouTube URL:</label>
+
+      <input
+        type="url"
+        name="url"
+        id="url"
+        placeholder="https://youtube.com/"
+        pattern="https://.*"
+        size="30"
+        required
+      />
+      <label for="fetch-button"></label>
+      <input type="button" id='getData' onclick="GetData()" value="Fetch and Summarize">
+    </section>
+    <section class="summarize-box">
+        
+
+    </section>
+  </body>
+</html>
