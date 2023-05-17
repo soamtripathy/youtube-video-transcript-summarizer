@@ -9,15 +9,9 @@
   </head>
   <body>
     <section class="mainmenu">
-      <ul>
-        Home
-      </ul>
-      <ul>
-        About Us
-      </ul>
-      <ul>
-        Contact
-      </ul>
+      <li>Home</li>
+      <li>About Us</li>
+      <li>Contact</li>
     </section>
     <section class="url-link">
       <label for="url">Enter YouTube URL:</label>
@@ -32,11 +26,15 @@
         required
       />
       <label for="fetch-button"></label>
-      <input type="button" id='getData' onclick="GetData()" value="Fetch and Summarize">
+      <input
+        type="button"
+        id="getData"
+        onclick="GetData()"
+        value="Summarize"
+      />
     </section>
     <section class="summarize-box">
-        
-
+      <textarea name="sumarize" id="summarize_box"></textarea>
     </section>
   </body>
 </html>

@@ -1,0 +1,56 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-image: url("img/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.mainmenu{
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+
+}
+li {
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  float: left;
+  list-style-type: none;
+  padding: 15px;
+  margin: 10px;
+  
+  
+}
+.url-link{
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  
+}
+input[type = 'url']{
+  padding: 3px;
+
+}
+.summarize-box{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  padding: 20px;
+
+}
+textarea{
+  height: 270px;
+  width: 515px;
+}
+
