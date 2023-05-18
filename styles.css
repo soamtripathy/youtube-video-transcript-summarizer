@@ -2,19 +2,20 @@
   margin: 0px;
   padding: 0px;
 }
-body{
+body {
   background-image: url("img/bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
-.mainmenu{
+.mainmenu {
   padding: 20px;
   display: flex;
   justify-content: flex-start;
   color: white;
-
+  backdrop-filter: blur(10px);
 }
+
 li {
   float: left;
   text-align: center;
@@ -24,33 +25,69 @@ li {
   list-style-type: none;
   padding: 15px;
   margin: 10px;
-  
-  
 }
-.url-link{
+li a {
+  text-decoration: none;
+  color: aliceblue;
+}
+li a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+.url-link {
   padding: 50px;
   display: flex;
+  margin: 20px;
   justify-content: center;
   margin: 20px;
   text-decoration: none;
   font-size: 20px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   color: white;
-  
 }
-input[type = 'url']{
-  padding: 3px;
+label{
+  padding: 7px;
 
 }
-.summarize-box{
+input[type="url"] {
+  padding: 3px;
+  text-decoration: none;
+  border: 2px solid black;
+  width: 50%;
+  border-radius: 5px;
+
+}
+input[type="button"]{
+  width: 20%;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+}
+.summarize-box {
   display: flex;
   justify-content: center;
   text-decoration: none;
   padding: 20px;
-
 }
-textarea{
+textarea {
   height: 270px;
   width: 515px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
+
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
 

@@ -7,15 +7,16 @@
     <title>Youtube Video Transcript Summarizer</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <section class="mainmenu">
-      <li>Home</li>
-      <li>About Us</li>
-      <li>Contact</li>
-    </section>
-    <section class="url-link">
-      <label for="url">Enter YouTube URL:</label>
 
+  <body>
+    <div class="mainmenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About Us</a></li>
+    </div>
+
+    <div class="url-link">
+      <label for="url">Enter YouTube URL &nbsp;:</label>
       <input
         type="url"
         name="url"
@@ -26,15 +27,13 @@
         required
       />
       <label for="fetch-button"></label>
-      <input
-        type="button"
-        id="getData"
-        onclick="GetData()"
-        value="Summarize"
-      />
-    </section>
-    <section class="summarize-box">
+      <input type="button" id="getData" onclick="GetData()" value="Summarize" />
+    </div>
+    <div class="summarize-box">
       <textarea name="sumarize" id="summarize_box"></textarea>
-    </section>
+    </div>
   </body>
+  <footer>
+    <p>Made By Soumya, Pranab, Saibhav and Sruti</p>
+  </footer>
 </html>
