@@ -15,6 +15,12 @@
       href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap"
       rel="stylesheet"
     />
+    <script>
+      function adjustHeight(el) {
+        el.style.height =
+          el.scrollHeight > el.clientHeight ? el.scrollHeight + "px" : "60px";
+      }
+    </script>
     <style>
       * {
         margin: 0px;
@@ -136,6 +142,15 @@
           rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
         transform: scale(1.01);
       }
+      textarea {
+        border: 2px solid black;
+        border-radius: 5px;
+        min-height: 250px;
+        overflow-y: auto;
+        word-wrap: break-word;
+        resize: none;
+        width: 60%;
+      }
     </style>
   </head>
 
@@ -159,18 +174,35 @@
     <div>
       {% if transcript %}
       <h2>Original Text:</h2>
-      <p>{{ transcript }}</p>
+      <textarea
+        name="original_text"
+        id="real_text"
+        onkeyup="adjustHeight(this)"
+      >
+      {{ transcript }}
+        
+      </textarea>
+      <p>The Original Text length is: {{ length_transcript }}</p>
       {% endif %}
     </div>
 
     <div>
       {% if summary %}
       <h2>Summary:</h2>
-      <p>{{ summary }}</p>
+      <textarea
+        name="summary_text"
+        id="summarize_text"
+        onkeyup="adjustHeight(this)"
+      >
+      {{ summary }}
+      
+    </textarea
+      >
+      <p>The Summarize Text length is: {{ summary_length }}</p>
       {% endif %}
     </div>
   </body>
   <footer>
-    <p>Made by Soumya, Pranab and Saibhav</p>
+    <p>Made by Soumya, Pranab, Saibhav and Smruti</p>
   </footer>
 </html>
