@@ -8,6 +8,12 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return render_template("index.html")
+@app.route("/home")
+def home():
+    return render_template("index.html")
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
 
 @app.route('/summary', methods=['POST'])
@@ -22,12 +28,19 @@ def summary_api():
 
 
 def get_transcript(video_id):
-    transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
-    transcript = ' '.join([d['text'] for d in transcript_list])
+    try:
+        transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
+    except:
+        transcript="No Transcript Available for This Video"
+    else:    
+        transcript = ' '.join([d['text'] for d in transcript_list])
     return transcript
 
 
 def get_summary(transcript):
+    text="No Transcript Available for This Video"
+    if transcript==text:
+        return transcript
     summariser = pipeline('summarization')
     summary = ''
     for i in range(0, (len(transcript)//1000)+1):
@@ -38,4 +51,4 @@ def get_summary(transcript):
 
 
 if __name__ == '__main__':
-    app.run(port=8000)
+    app.run(debug = False, host='0.0.0.0')

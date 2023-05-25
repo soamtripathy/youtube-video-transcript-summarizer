@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background: #12c2e9; /* fallback for old browsers */
+        background: -webkit-linear-gradient(
+          to right,
+          #f64f59,
+          #c471ed,
+          #12c2e9
+        ); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(
+          to right,
+          #f64f59,
+          #c471ed,
+          #12c2e9
+        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+      .mainmenu {
+        padding: 20px;
+        display: flex;
+        justify-content: flex-start;
+        color: black;
+        backdrop-filter: blur(10px);
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      li {
+        float: left;
+        text-align: center;
+        text-decoration: none;
+        font-size: 22px;
+        float: left;
+        list-style-type: none;
+        padding: 5px;
+        margin: 5px;
+      }
+      li a {
+        text-decoration: none;
+        color: black;
+      }
+      li a:hover {
+        background-color: white;
+        color: black;
+        border-radius: 5px;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px;
+        margin: 10px;
+        font-size: 45px;
+        font-family: "Pangolin", cursive;
+      }
+      button {
+        transition: all 0.5s ease;
+        color: #fff;
+        border: none;
+        font-family: "Times New Roman", Times, serif;
+        text-align: center;
+        line-height: 1;
+        font-size: 25px;
+        background-color: transparent;
+        padding: 10px;
+        outline: none;
+        border-radius: 4px;
+      }
+      button:hover {
+        color: #001f3f;
+        background-color: #fff;
+      }
+      p{
+        font-size: 18px;
+        padding: 35px;
+        margin: 5px;
+        padding-bottom: 50px;
+
+      }
+      img{
+        width: 50%;
+      }
+      h3{
+        text-align: center;
+        padding-bottom: 30px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+        
+      }
+      ul{
+        text-align: center;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mainmenu">
+      <li>
+        <form action="/home" method="GET">
+          <button>Home</button>
+        </form>
+      </li>
+      <li>
+        <form action="/about" method="GET">
+          <button>About Us</button>
+        </form>
+      </li>
+    </div>
+    <div class="our_image" align="middle">
+      <img src="{{url_for('static', filename='img1.jpg')}}" align="middle" />
+    </div>
+    <div class="main_content">
+      <p>
+        We are a group of four final-year B.Tech Computer Science and
+        Engineering (CSE) students working on our major project—an innovative
+        YouTube transcript summarizer website. Our goal is to simplify the
+        process of extracting key information from YouTube videos by providing
+        concise and accurate summaries. Leveraging our strong foundation in
+        computer science and expertise in programming languages, data
+        structures, algorithms, and machine learning, we developed an
+        intelligent system that automatically transcribes videos and generates
+        summaries. Our user-friendly platform aims to revolutionize information
+        retrieval, benefiting students, researchers, and professionals. We are
+        dedicated to enhancing the user experience and welcome your feedback and
+        support as we continue to evolve and expand our website.
+      </p>
+    </div>
+    <div class="email-id">
+    <h3>Reach Out to Us</h3>
+    <ul><a href="mailto:soumyaranjantripathy44@gmail.com">Soumya Ranjan Tripathy</a></ul>
+    <ul><a href="mailto:sahupranabkumar167@gmail.com">Pranab Kumar Sahu</a></ul>
+    <ul><a href="mailto:saibhavsahu4444@gmail.com">Saibhav Ranjan Sahu</a></ul>
+    <ul><a href="mailto:panigrahismruti1@gmail.com">Saibhav Ranjan Sahu</a></ul>
+    </div>
+  </body>
+</html>
